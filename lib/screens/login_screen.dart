@@ -1,7 +1,7 @@
 import 'package:flash_chat/screens/chat_screen.dart';
-import 'package:flash_chat/utilities/clickablebutton.dart';
+import 'package:flash_chat/components/clickablebutton.dart';
 import 'package:flutter/material.dart';
-import 'package:flash_chat/constants.dart';
+import 'package:flash_chat/utilities/constants.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';
