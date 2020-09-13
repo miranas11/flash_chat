@@ -68,12 +68,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             ClickableButton(
               color: Colors.lightBlueAccent,
               buttonText: 'Log In',
-              screenId: LoginScreen.id,
+              onClick: () {
+                Navigator.pushNamed(context, LoginScreen.id);
+              },
             ),
             ClickableButton(
               color: Colors.blueAccent,
               buttonText: 'Register',
-              screenId: RegistrationScreen.id,
+              onClick: () {
+                Navigator.pushNamed(context, RegistrationScreen.id);
+              },
             )
           ],
         ),

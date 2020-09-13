@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ClickableButton extends StatelessWidget {
   final String buttonText;
   final Color color;
-  final String screenId;
-  ClickableButton({this.color, this.buttonText, this.screenId});
+  Function onClick;
+  ClickableButton({this.color, this.buttonText, @required this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +16,7 @@ class ClickableButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(30.0),
         elevation: 5.0,
         child: MaterialButton(
-          onPressed: () {
-            Navigator.pushNamed(context, screenId);
-          },
+          onPressed: onClick,
           minWidth: 200.0,
           height: 42.0,
           child: Text(
